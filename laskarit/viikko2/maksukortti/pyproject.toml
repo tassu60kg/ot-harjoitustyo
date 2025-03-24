@@ -1,0 +1,20 @@
+[project]
+name = "maksukortti"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "tassu60kg",email = "159922849+tassu60kg@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = "^3.10"
+dependencies = [
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
