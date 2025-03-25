@@ -1,7 +1,7 @@
 # Ohjelmistotekniikka, harjoitustyö
 
 [laskarit](./laskarit)
-[vaatimusmäärittely](./dokumentaatio/vaatuvuusmaarittely.md)
+[vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
 [tuntikirjanpito](./dokumentaatio/tuntikirjanpito.md)
 
 
