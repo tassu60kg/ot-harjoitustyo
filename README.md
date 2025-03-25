@@ -1,6 +1,9 @@
 # Ohjelmistotekniikka, harjoitustyö
 
-[laskarit](laskarit)
+[laskarit](./laskarit)
+[vaatimusmäärittely](./dokumentaatio/vaatuvuusmaarittely.md)
+[tuntikirjanpito](./dokumentaatio/tuntikirjanpito.md)
+
 
 videopeli:
 
