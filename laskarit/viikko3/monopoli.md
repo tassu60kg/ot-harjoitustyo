@@ -15,7 +15,7 @@
     Laitokset "2" -- "1" Ruutu
     Sattuma "3" -- "1" Ruutu
     Yhteismaa "3" -- "1" Ruutu
-    Normaali katu (joihin liittyy nimi) "22" -- "1" Ruutu
+    Katu "22" -- "1" Ruutu
     Yhteismaa -- Toiminto
     Sattuma -- Toiminto
     Toiminto ">1" -- Pelaaja	
