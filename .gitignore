@@ -1,2 +1,3 @@
 .pytest_cache
 htmlcov
+__pycache__

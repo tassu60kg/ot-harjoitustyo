@@ -4,7 +4,8 @@
 [vaatimusmäärittely](./dokumentaatio/vaatimusmaarittely.md)
 [tuntikirjanpito](./dokumentaatio/tuntikirjanpito.md)
 
-aja komento 'poetry run invoke build' ennen käynnistämistä
+1. aja komento 'poetry install' riippuvuuksien lataamiseksi
+2. aja komento 'poetry run invoke build' ennen käynnistämistä
 
 videopeli:
 
