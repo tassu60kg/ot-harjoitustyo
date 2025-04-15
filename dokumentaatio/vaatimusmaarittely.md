@@ -6,8 +6,8 @@ Sovellus on peli, jonka visiona olisi olla jonkinlainen twinstick shootteri
 
 ## Toiminnallisuus
  - päävalikko
- - Pelaaja liikkuu ijkl-näppäimillä ja kääntää suuntaansa hiirellä
- - Vihollisia ilmestyy ruudun ulkopuolella mistä lähestyvät pelaajaa
+ - Pelaaja liikkuu qwsd-näppäimillä ja kääntää suuntaansa hiirellä (tehty)
+ - Vihollisia ilmestyy ruudun ulkopuolella mistä lähestyvät pelaajaa (tehty)
  - pelin jatkuessa vihollisten määrä ja vaikeus kasvavat
  - pelin jatkuessa pelaaja avaa uutta kalustoa tai kehittyy muilla tavoin
  - parhaat pisteet tallenneaan tietokantaan

@@ -4,41 +4,12 @@ from enemy import Spawncontroller
 
 
 
-map = [[0,0,0,0,0,0,0,0,0,0],
-        [0,0,1,1,0,0,0,0,0,0],
-        [0,0,1,0,0,0,0,0,0,0],
-        [0,0,0,0,2,0,0,1,0,0],
-        [0,0,1,0,0,0,1,1,0,0],
-        [0,0,1,1,0,0,0,0,0,0],
-        [0,0,0,0,0,0,0,0,0,0],]
-tile_size = 100
-
-def main():
-    height = len(map)
-    width = len(map[0])    
-    realheight = height*tile_size
-    realwidth = width*tile_size
-
-    display = pygame.display.set_mode((realwidth, realheight))
 
 
-    pygame.display.set_caption("ts pmo")
 
-    movespeed = 5
-
-    level = Level(map,tile_size)
-
-    spawncontroller = Spawncontroller()
-
-    pygame.init()
-
-    level.sprites.draw(display)
-
-    running = True
-
+def main(): #this sucks
     n=0
-    
-
+    running = True
     while running:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -75,5 +46,26 @@ def main():
 
 
 if __name__ == "__main__":
+    map = [[0,0,0,0,0,0,0,0,0,0],
+        [0,0,1,1,0,0,0,0,0,0],
+        [0,0,1,0,0,0,0,0,0,0],
+        [0,0,0,0,2,0,0,1,0,0],
+        [0,0,1,0,0,0,1,1,0,0],
+        [0,0,1,1,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0,0],]
+    tile_size = 100
+
+    height = len(map)
+    width = len(map[0])    
+    realheight = height*tile_size
+    realwidth = width*tile_size
+    display = pygame.display.set_mode((realwidth, realheight))
+    pygame.display.set_caption("???")
+    movespeed = 5
+    level = Level(map,tile_size)
+    spawncontroller = Spawncontroller()
+    pygame.init()
+    level.sprites.draw(display)
+    
     main()
 
