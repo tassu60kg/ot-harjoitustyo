@@ -7,3 +7,6 @@
  - viholliset liikkuvat paremmin
  - viholliset syntyvät oikeasti ympyrässä
  - yksikkötestit
+## viikko 6
+ - uusi vihollinen
+ - häviäminen

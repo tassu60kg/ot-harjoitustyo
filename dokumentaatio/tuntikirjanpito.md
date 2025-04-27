@@ -8,4 +8,5 @@
 | 8.4   | 3    | pelin vihollisten kehittely |
 | 11.4  | 4    | pelin vihollisten toimivuus saavutettu, pylint käyttöön |
 | 15.4  | 3    | yksikkötestien kehitys |
-|yhteensä | 14.5 | kaikki |
+| 27.4  | 1    | häviäminen, uusia vihollisia
+|yhteensä | 15.5 | kaikki |

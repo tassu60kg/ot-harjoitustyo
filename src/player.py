@@ -21,3 +21,9 @@ class Player(pygame.sprite.Sprite):
             if i.rect.clipline((self.rect.x+15,self.rect.y+15),(mouse[0],mouse[1])) != ():
                 enemy.remove(i)
         pygame.display.flip()
+
+    def die(self,enemy):
+        for i in enemy:
+            if self.rect.colliderect(i):
+                return True
+        return False
