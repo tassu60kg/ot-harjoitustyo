@@ -8,5 +8,6 @@
 | 8.4   | 3    | pelin vihollisten kehittely |
 | 11.4  | 4    | pelin vihollisten toimivuus saavutettu, pylint käyttöön |
 | 15.4  | 3    | yksikkötestien kehitys |
-| 27.4  | 1    | häviäminen, uusia vihollisia
+| 27.4  | 1    | häviäminen, uusi vihollinen
+| 3.5   | 2    | formatointi, parempi liikkuminen pelaajalle
 |yhteensä | 15.5 | kaikki |
