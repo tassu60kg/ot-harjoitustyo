@@ -53,6 +53,6 @@ class Level:
 
                 elif tile == 2:
                     self.player = Player(real_x, real_y)
-                    self.walls.add(Floor(real_x, real_y))
+                    self.floors.add(Floor(real_x, real_y))
 
         self.sprites.add(self.floors, self.walls, self.player)

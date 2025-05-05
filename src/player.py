@@ -13,16 +13,20 @@ class Player(pygame.sprite.Sprite):
         self.dir = pygame.math.Vector2(0, 0)
 
 
-    def move_player(self,movespeed):
+    def move_player(self,movespeed,walls):
         if not (self.dir.x == 0 and self.dir.y == 0):
             self.dir.normalize_ip()
             self.dir *= movespeed
             self.rect.x += self.dir.x 
             self.rect.y += self.dir.y 
+            for i in walls:
+                if self.rect.colliderect(i):
+                    self.rect.x -= self.dir.x 
+                    self.rect.y -= self.dir.y 
+                    break
             self.dir.x = 0
             self.dir.y = 0
             
-        
 
     def moveplayerx(self, x=0):
         self.dir.x = x

@@ -10,4 +10,5 @@
 | 15.4  | 3    | yksikkötestien kehitys |
 | 27.4  | 1    | häviäminen, uusi vihollinen
 | 3.5   | 2    | formatointi, parempi liikkuminen pelaajalle
-|yhteensä | 15.5 | kaikki |
+| 5.5   | 3.5  | seinien toiminta, vihollisten vaikeutuminen, karttojen kehitys aloitettu
+|yhteensä | 19 | kaikki |

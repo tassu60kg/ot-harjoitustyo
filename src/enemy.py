@@ -32,6 +32,7 @@ class Enemy2(pygame.sprite.Sprite):
 class Spawncontroller():
     def __init__(self):
         self.enemy = pygame.sprite.Group()
+        self.difficulty = 1.0
 
     def summon(self, enemy, screen, forcepos=False, pos=(0, 0)):
         if enemy == 1:
@@ -62,5 +63,10 @@ class Spawncontroller():
             if not (i.dir.x == 0 and i.dir.y == 0):
                 i.dir.normalize_ip()
                 i.dir *= 2
-                i.rect.x += i.dir.x * i.move_speed
-                i.rect.y += i.dir.y * i.move_speed
+                i.rect.x += i.dir.x * i.move_speed * self.difficulty
+                i.rect.y += i.dir.y * i.move_speed * self.difficulty
+                for j in self.enemy:
+                    if i.rect.colliderect(j) and i != j:
+                        i.rect.y -= i.dir.y * i.move_speed * 1.5
+                        i.rect.x -= i.dir.x * i.move_speed * 1.5
+                        break
