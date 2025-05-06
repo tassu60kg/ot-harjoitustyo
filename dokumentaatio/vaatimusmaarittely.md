@@ -5,7 +5,7 @@
 Sovellus on peli, jonka visiona olisi olla jonkinlainen twinstick shootteri
 
 ## Toiminnallisuus
- - päävalikko
+ - päävalikko (tehty)
  - Pelaaja liikkuu qwsd-näppäimillä ja kääntää suuntaansa hiirellä (tehty)
  - Vihollisia ilmestyy ruudun ulkopuolella mistä lähestyvät pelaajaa (tehty)
  - pelin jatkuessa vihollisten määrä ja vaikeus kasvavat (tehty)
@@ -14,5 +14,5 @@ Sovellus on peli, jonka visiona olisi olla jonkinlainen twinstick shootteri
 
 ## Jatkokehitys
  - useita vihollistyyppejä (tehty)
- - eri karttoja
+ - eri karttoja (tehty)
  - useita hahmoja 

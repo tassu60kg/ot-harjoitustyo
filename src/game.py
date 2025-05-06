@@ -4,7 +4,7 @@ from enemy import Spawncontroller
 from math import floor
 
 
-def main(): 
+def main(map,tile_size): 
     height = len(map)
     width = len(map[0])
     realheight = height*tile_size
@@ -71,17 +71,3 @@ def main():
     pygame.quit()
 
 
-if __name__ == "__main__":
-    map = [[0,0,0,0,0,0,0,0,0],
-          [0,0,0,0,0,0,0,0,0],
-          [0,0,0,0,0,0,0,0,0],
-          [0,0,0,0,0,0,0,0,0],
-          [1,0,1,0,1,2,1,0,1],
-          [0,0,0,0,0,0,0,0,0],
-          [0,0,0,0,0,0,0,0,0],
-          [0,0,0,0,0,0,0,0,0],
-          [0,0,0,0,0,0,0,0,0]]
-
-    tile_size = 100
-
-    main()

@@ -11,4 +11,5 @@
 | 27.4  | 1    | häviäminen, uusi vihollinen
 | 3.5   | 2    | formatointi, parempi liikkuminen pelaajalle
 | 5.5   | 3.5  | seinien toiminta, vihollisten vaikeutuminen, karttojen kehitys aloitettu
-|yhteensä | 19 | kaikki |
+| 6.6   | 4    | päävalikko, karttojen kehitys
+|yhteensä | 23 | kaikki |
