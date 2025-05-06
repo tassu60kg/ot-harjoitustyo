@@ -11,6 +11,7 @@ class Player(pygame.sprite.Sprite):
         self.rect.x = x
         self.rect.y = y
         self.dir = pygame.math.Vector2(0, 0)
+        self.cubes_terminated = 0
 
 
     def move_player(self,movespeed,walls):
@@ -39,6 +40,7 @@ class Player(pygame.sprite.Sprite):
         for i in enemy:
             if i.rect.clipline((self.rect.x+15, self.rect.y+15), (mouse[0], mouse[1])) != ():
                 enemy.remove(i)
+                self.cubes_terminated+=1
         pygame.display.flip()
 
     def die(self, enemy):

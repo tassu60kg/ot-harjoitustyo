@@ -18,7 +18,7 @@ def main(map,tile_size):
     level.sprites.draw(display)
     pygame.font.init() 
     font = pygame.font.SysFont('Comic Sans MS', 30)
-    
+    alive = True
     time_alive = 1
     enemy1_delay = 150
     enemy2_delay = 250
@@ -43,31 +43,38 @@ def main(map,tile_size):
             level.player.moveplayery(-1)
         if keys[pygame.K_s] and level.player.rect.y < realheight - 30:
             level.player.moveplayery(1)
+        if keys[pygame.K_ESCAPE]:
+            running = False
         
         level.player.move_player(movespeed,level.walls)
+        if alive:
+            if time_alive % enemy1_delay == 0:
+                spawncontroller.summon(1, (realwidth//2, realheight//2))
+            if time_alive % enemy2_delay == 0:
+                spawncontroller.summon(2, (realwidth//2, realheight//2))
+            if time_alive % 500 == 0:
+                spawncontroller.difficulty *= 1.1
+                enemy1_delay = floor(enemy1_delay * 0.9)
+                enemy2_delay = floor(enemy2_delay * 0.95)
+            
 
-        if time_alive % enemy1_delay == 0:
-            spawncontroller.summon(1, (realwidth//2, realheight//2))
-        if time_alive % enemy2_delay == 0:
-            spawncontroller.summon(2, (realwidth//2, realheight//2))
-        if time_alive % 500 == 0:
-            spawncontroller.difficulty *= 1.1
-            enemy1_delay = floor(enemy1_delay * 0.9)
-            enemy2_delay = floor(enemy2_delay * 0.95)
-        
+            level.sprites.draw(display)
+            spawncontroller.enemy.draw(display)
+            display.blit(font.render(f"{time_alive//40},{level.player.cubes_terminated}", True, (100, 100, 100)), (10,10))
+            pygame.display.update()
+            time_alive += 1
+            spawncontroller.move_enemy((level.player.rect.x, level.player.rect.y))
 
-        level.sprites.draw(display)
-        spawncontroller.enemy.draw(display)
-        display.blit(font.render(f"{time_alive//40}", True, (100, 100, 100)), (10,10))
-        pygame.display.update()
-        time_alive += 1
-        spawncontroller.move_enemy((level.player.rect.x, level.player.rect.y))
-
-        if level.player.die(spawncontroller.enemy):
-            pygame.display.set_caption("you dead")
-        
-        pygame.time.wait(25)
-
+            if level.player.die(spawncontroller.enemy):
+                pygame.display.set_caption("you dead") 
+                alive = False   
+            pygame.time.wait(25)
+        else:
+            display.blit(font.render(f"score: {(time_alive//40)*level.player.cubes_terminated}", True, (100, 100, 100)), (realheight//2,realwidth//2))
+            display.blit(font.render(f"esc to quit", True, (100, 100, 100)), (50+(realheight//2),realwidth//2))
+            pygame.display.update()
+            pygame.time.wait(25)
+            
     pygame.quit()
 
 
