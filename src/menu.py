@@ -1,5 +1,6 @@
 import pygame
 from game import main
+from scores import Scores
 
 def loadmap(map,tile_size):
      main(map,tile_size)
@@ -18,10 +19,14 @@ map = [[0,0,0,0,0,0,0,0,0],
 tile_size = 100
 pygame.init()
 pygame.font.init()
-print(pygame.display.Info().current_h)
 display = pygame.display.set_mode((pygame.display.Info().current_w, pygame.display.Info().current_h)) 
 font = pygame.font.SysFont('Comic Sans MS', 40)
 font2 = pygame.font.SysFont('Comic Sans MS', 25)
+scores = Scores()
+score_display = ""
+for i in scores.readscore():
+     score_display += f"{i[0]}:{i[1]} | "
+
 while running:
     for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -73,6 +78,7 @@ while running:
     display.blit(font2.render(f"3: pilarit", True, (100, 100, 100)), (150,4*(pygame.display.Info().current_h//10)))
     display.blit(font2.render(f"4: hyvä, älä pelaa", True, (100, 100, 100)), (150,5*(pygame.display.Info().current_h//10)))
     display.blit(font2.render(f"5: huono, älä pelaa", True, (100, 100, 100)), (150,6*(pygame.display.Info().current_h//10)))
+    display.blit(font2.render(f"{score_display}", True, (100, 100, 100)), ((pygame.display.Info().current_w//3),2*(pygame.display.Info().current_h//10)))
 
     pygame.display.update()
     pygame.time.wait(25)

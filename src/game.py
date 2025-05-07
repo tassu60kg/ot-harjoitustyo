@@ -2,6 +2,7 @@ import pygame
 from level import Level
 from enemy import Spawncontroller
 from math import floor
+from scores import Scores
 
 
 def main(map,tile_size): 
@@ -18,6 +19,7 @@ def main(map,tile_size):
     level.sprites.draw(display)
     pygame.font.init() 
     font = pygame.font.SysFont('Comic Sans MS', 30)
+    scores = Scores()
     alive = True
     time_alive = 1
     enemy1_delay = 150
@@ -67,11 +69,14 @@ def main(map,tile_size):
 
             if level.player.die(spawncontroller.enemy):
                 pygame.display.set_caption("you dead") 
+                scores.addscore("test",(time_alive//40)*level.player.cubes_terminated)
                 alive = False   
             pygame.time.wait(25)
         else:
-            display.blit(font.render(f"score: {(time_alive//40)*level.player.cubes_terminated}", True, (100, 100, 100)), (realheight//2,realwidth//2))
-            display.blit(font.render(f"esc to quit", True, (100, 100, 100)), (50+(realheight//2),realwidth//2))
+            display.blit(font.render(f"score: {(time_alive//40)*level.player.cubes_terminated}", True, (100, 100, 100)), (1*(realwidth//10),(realheight//10)))
+            display.blit(font.render(f"esc to quit", True, (100, 100, 100)), (1*(realwidth//10),2*(realheight//10)))
+            for j,i in enumerate(scores.readscore()):
+                display.blit(font.render(f"{i[0]}:{i[1]}", True, (100, 100, 100)), (1*(realwidth//10),(3+j)*(realheight//10)))
             pygame.display.update()
             pygame.time.wait(25)
             

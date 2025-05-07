@@ -3,3 +3,4 @@ htmlcov
 __pycache__
 .coverage
 src/__pycache__
+scores.db

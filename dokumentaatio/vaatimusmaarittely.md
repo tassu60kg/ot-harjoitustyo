@@ -10,7 +10,7 @@ Sovellus on peli, jonka visiona olisi olla jonkinlainen twinstick shootteri
  - Vihollisia ilmestyy ruudun ulkopuolella mistä lähestyvät pelaajaa (tehty)
  - pelin jatkuessa vihollisten määrä ja vaikeus kasvavat (tehty)
  - pelin jatkuessa pelaaja avaa uutta kalustoa tai kehittyy muilla tavoin
- - parhaat pisteet tallenneaan tietokantaan
+ - parhaat pisteet tallenneaan tietokantaan (tehty osittain)
 
 ## Jatkokehitys
  - useita vihollistyyppejä (tehty)
