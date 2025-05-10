@@ -60,3 +60,7 @@ class TestEnemy(unittest.TestCase):
     def test_summoning(self):
         self.enemy.summon(1, self.srceen, True, (100, 100))
         self.assertEqual(len(self.enemy.enemy), 1)
+    
+    def test_summoning2(self):
+        self.enemy.summon(2, self.srceen, True, (100, 100))
+        self.assertEqual(len(self.enemy.enemy), 1)

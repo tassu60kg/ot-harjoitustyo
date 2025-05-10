@@ -17,4 +17,7 @@ class TestLevel(unittest.TestCase):
     def test_wall(self):
         for i in self.level.walls:
             n = i
-        self.assertEqual(n.rect, (400, 400, 100, 100))
+        self.assertEqual(n.rect, (100, 100, 100, 100))
+
+    def test_player(self):
+        self.assertEqual(self.level.player.rect,(400,400,30,30))

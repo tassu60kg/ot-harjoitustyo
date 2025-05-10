@@ -13,4 +13,5 @@
 | 5.5   | 3.5  | seinien toiminta, vihollisten vaikeutuminen, karttojen kehitys aloitettu
 | 6.5   | 5    | päävalikko, karttojen kehitys, häviäminen
 | 7.5   | 4    | tietokantojen integrointi
-|yhteensä | 27 | kaikki |
+| 10.5  | 5    | tietokantojen integrointi loppuun, formatointi, dokumentaatio, testien luonti
+|yhteensä | 35 | kaikki |

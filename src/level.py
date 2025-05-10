@@ -1,3 +1,4 @@
+"builds the level given in menu"
 import pygame
 from player import Player
 
@@ -39,7 +40,7 @@ class Level:
         height = len(map)
         width = len(map[0])
 
-        for x in range(width):  # make less bad
+        for x in range(width): 
             for y in range(height):
                 tile = map[y][x]
                 real_x = x*self.tile_size
