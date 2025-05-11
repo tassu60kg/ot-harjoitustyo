@@ -9,7 +9,7 @@
 2. aja komento 'poetry run invoke build' ennen käynnistämistä
 3. (vaapaaehtoista) nimeä itsesi name.txt tiedostossa
 
-##komentorivin toiminnot
+## komentorivin toiminnot
 
 ohjelma suoritetaan komennolla
 	poetry run invoke start
