@@ -14,4 +14,5 @@
 | 6.5   | 5    | päävalikko, karttojen kehitys, häviäminen
 | 7.5   | 4    | tietokantojen integrointi
 | 10.5  | 5    | tietokantojen integrointi loppuun, formatointi, dokumentaatio, testien luonti
-|yhteensä | 35 | kaikki |
+| 11.5  | 5    | viimeistely + dokumentaatio
+|yhteensä | 40 | kaikki |

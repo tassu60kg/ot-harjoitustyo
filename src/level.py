@@ -26,6 +26,7 @@ class Floor(pygame.sprite.Sprite):
 
 
 class Level:
+    "building the map"
     def __init__(self, map, tile_size):
         self.tile_size = tile_size
         self.map = map

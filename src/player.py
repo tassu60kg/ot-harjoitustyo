@@ -3,6 +3,7 @@ import pygame
 
 
 class Player(pygame.sprite.Sprite):
+    """class for player character and player actions"""
     def __init__(self, x, y):
         super().__init__()
 
@@ -35,6 +36,7 @@ class Player(pygame.sprite.Sprite):
         self.dir.y = y
 
     def shooter(self, mouse, display, enemy):
+        
         pygame.draw.line(display, (255, 0, 0), (self.rect.x+15,
                          self.rect.y+15), (mouse[0], mouse[1]))
         for i in enemy:
@@ -44,6 +46,11 @@ class Player(pygame.sprite.Sprite):
         pygame.display.flip()
 
     def die(self, enemy):
+        """checks of player rect is colliding with another rect
+            
+            Args:
+                enemy: pygame sprite group, group to check collision with
+        """
         for i in enemy:
             if self.rect.colliderect(i):
                 return True

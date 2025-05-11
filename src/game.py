@@ -4,6 +4,7 @@ from level import Level
 from enemy import Spawncontroller
 from math import floor
 from scores import Scores
+import os
 
 
 def main(map, tile_size):
@@ -22,7 +23,7 @@ def main(map, tile_size):
     pygame.font.init()
     font = pygame.font.SysFont('Comic Sans MS', 30)
     scores = Scores()
-    file = open("name.txt","r")
+    file = open(os.path.join(os.path.dirname(__file__), "name.txt"),"r")
     playername = file.read()
     file.close()
     alive = True

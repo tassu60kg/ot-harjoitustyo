@@ -4,7 +4,8 @@ import math
 import random
 
 
-class Enemy1(pygame.sprite.Sprite):  # basic red square enemy
+class Enemy1(pygame.sprite.Sprite):
+    "basic red enemy"
     def __init__(self, x=0, y=0):
         super().__init__()
 
@@ -18,6 +19,7 @@ class Enemy1(pygame.sprite.Sprite):  # basic red square enemy
 
 
 class Enemy2(pygame.sprite.Sprite):
+    "faster enemy"
     def __init__(self, x=0, y=0):
         super().__init__()
 
@@ -31,11 +33,24 @@ class Enemy2(pygame.sprite.Sprite):
 
 
 class Spawncontroller():
+    """class for summoning enemy characters"""
     def __init__(self):
         self.enemy = pygame.sprite.Group()
         self.difficulty = 1.0
 
     def summon(self, enemy, screen, forcepos=False, pos=(0, 0)):
+        """summons an enemy, by default summons in a circle around the center of the screen
+            
+            Args:
+                enemy: 
+                    enemy type; 1 for default 2 for faster
+                screen: 
+                    tuple, center of the screen (x,y)
+                forcepos: 
+                    bool, default False. True to choose the location
+                pos: 
+                    tuple, location of the summon if forcepos is True
+        """
         if enemy == 1:
             if forcepos:
                 x = pos[0]
@@ -58,6 +73,11 @@ class Spawncontroller():
                 self.enemy.add(Enemy2(x, y))
 
     def move_enemy(self, player):
+        """moves the enemy towards the given player and prevents enemies from phasing trough eachother
+
+            Args:
+                player: tuple, point where enemies move (x,y)
+        """
         for i in self.enemy:
             i.dir.x = player[0] - i.rect.x
             i.dir.y = player[1] - i.rect.y
