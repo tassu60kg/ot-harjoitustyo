@@ -6,7 +6,14 @@
  - viholliset katoavat tultuaan ammutuksi
  - viholliset liikkuvat paremmin
  - viholliset syntyvät oikeasti ympyrässä
- - yksikkötestit
+ - yksikkötestejä luotu
 ## viikko 6
  - uusi vihollinen
  - häviäminen
+## viikko 7
+ - päävalikko
+ - uusia karttoja
+ - tulosten tallentaminen
+ - pelin vaikeneminen
+ - lisää yksikkötestejä
+ - dokumentaatio
