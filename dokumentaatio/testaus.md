@@ -1,6 +1,6 @@
 # Testausdokumentti
 
-Ohjelmaa on testattu automatisoiduin testein sekä joitakin osia testattu manuaalisesti (etenkin menu)
+Ohjelmaa on testattu automatisoiduin testein sekä joitakin osia testattu manuaalisesti
 
 ## Yksikkötestit
 
@@ -10,8 +10,8 @@ Ohjelmaa on testattu automatisoiduin testein sekä joitakin osia testattu manuaa
 
 "Player" on vaikeiten ja huonoiten testattu, suurin osa tämän ja "Enemy" luokan testeistä tehdään pygamen sisällä
 
-"scores" luokka testataan vain hiukan yli puoliksi, sillä testausrata on luotu huonosti, lisäksi uuden db tiedoston luontia ei testata; testit käyttävät erillistä tietokantaa
+"scores" luokka testataan alemman kuvan mukaan vain hiukan yli puoliksi. tämä johtuu siitä, että esim. uuden db tiedoston luontia ei testata. testit käyttävät erillistä tietokantaa 
 
-"game.py" ja "menu.py" tiedostoja ei testata sllä näillä ei ole omia funktioita vaan käyttävät muiden luokkien
+"game.py" ja "menu.py" tiedostoja ei testata yksikkötestein sllä näillä ei ole omia funktioita vaan käyttävät muiden luokkien
 
 ![Testikattavuusraportti](https://github.com/tassu60kg/ot-harjoitustyo/blob/main/kuvat/kattavuus.png "raportti")
