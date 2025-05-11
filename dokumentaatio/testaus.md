@@ -14,4 +14,4 @@ Ohjelmaa on testattu automatisoiduin testein sekä joitakin osia testattu manuaa
 
 "game.py" ja "menu.py" tiedostoja ei testata sllä näillä ei ole omia funktioita vaan käyttävät muiden luokkien
 
-![Testikattavuusraportti]("raportti")
+![Testikattavuusraportti](https://github.com/tassu60kg/ot-harjoitustyo/blob/main/kuvat/kattavuus.png "raportti")
