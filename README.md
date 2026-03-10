@@ -1,2 +1,3 @@
-# ot-harjoitustyo
-ohjelmistotuotanto
+# ohjelmistotuotanto harjoitustyö
+
+mä salee teen ohjelman tai sillee ykyk
