@@ -8,6 +8,7 @@ authors = [
 readme = "README.md"
 requires-python = "^3.12"
 dependencies = [
+    "invoke (>=2.2.1,<3.0.0)"
 ]
 
 [tool.poetry]
