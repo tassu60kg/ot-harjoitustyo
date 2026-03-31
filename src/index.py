@@ -7,17 +7,17 @@ from services import upgrades
 class UI:
     def __init__(self, root):
         self._root = root
-        self.gamethng = resources.Resource()
+        self.resource = resources.Resource()
         self.upgrade = upgrades.Upgrade()
         self.upgradelist = tkinter.Variable(value=self.upgrade.upgrades)
 
     def start(self):
         #good code alert
         global R1 
-        R1 = ttk.Label(master=self._root, text=self.gamethng.R1)
+        R1 = ttk.Label(master=self._root, text=self.resource.R1)
         global persecR1
-        R1name = ttk.Label(master=self._root, text="swag")
-        persecR1 = ttk.Label(master=self._root, text=f"{self.gamethng.addR1*10} swag per second")
+        R1name = ttk.Label(master=self._root, text="swag (temp name)")
+        persecR1 = ttk.Label(master=self._root, text=f"{self.resource.addR1*10} swag per second")
         global upgradeBox
         upgradeBox = Listbox(master=self._root, listvariable=self.upgradelist)
         
@@ -30,18 +30,15 @@ class UI:
 
         def boxHandler(event):
             selected = int(upgradeBox.curselection()[0])
-            print(selected)
-            self.upgrade.buy(self.gamethng, self.upgrade.upgrades[selected], selected)
+            self.upgrade.buy(self.resource, self.upgrade.upgrades[selected], selected)
 
         upgradeBox.bind("<<ListboxSelect>>", boxHandler)
 
-    
-
 
     def update(self):
-        self.gamethng.increase()
-        R1.config(text=self.gamethng.R1)
-        persecR1.config(text=f"{self.gamethng.addR1*10} swag per second")
+        self.resource.increase()
+        R1.config(text=self.resource.R1)
+        persecR1.config(text=f"{self.resource.addR1*10} swag per second")
         #10x per sec I think
         self.upgradelist = tkinter.Variable(value=self.upgrade.upgrades)
         upgradeBox.config(listvariable=self.upgradelist)
