@@ -7,6 +7,7 @@ Käynnistys ja aseunnus:
 2. mene src kansioon
 3. aja install.sh (yleensä "sh install.sh")
 4. aja run.sh
+
 Vaihtoehtoisesti:
 1. kloonaa repositorio
 2. aja "poetry install" src kansiossa
