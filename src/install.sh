@@ -1,2 +1,2 @@
 poetry install
-echo "idk maybe installed"
+echo "should be installed"

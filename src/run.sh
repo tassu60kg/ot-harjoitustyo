@@ -1,2 +1,2 @@
-echo "hello,, I hope this works"
+echo "starting"
 poetry run invoke start
