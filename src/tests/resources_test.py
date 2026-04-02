@@ -1,7 +1,7 @@
 import unittest
 from services import resources
 
-class TestUpgrade(unittest.TestCase):
+class TestResource(unittest.TestCase):
     def setUp(self):
         self.resource = resources.Resource(10,10)
 

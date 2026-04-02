@@ -30,7 +30,7 @@ class UI:
 
         def boxHandler(event):
             selected = int(upgradeBox.curselection()[0])
-            self.upgrade.buy(self.resource, self.upgrade.upgrades[selected], selected)
+            self.upgrade.buy(self.resource, selected)
 
         upgradeBox.bind("<<ListboxSelect>>", boxHandler)
 
