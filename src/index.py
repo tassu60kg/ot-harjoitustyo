@@ -34,7 +34,7 @@ class UI:
         ap.grid(row=1, column=0)
         buyap.grid(row=1,column=1)
         persec_r1.grid(row=0, column=1)
-        upgradeBox.grid(row=4,column=0)
+        upgrade_box.grid(row=4,column=0)
         character_box.grid(row=4, column=1)
 
 
@@ -57,7 +57,7 @@ class UI:
         persec_r1.config(text=f"{self.resource.add_r1*10} swag per second")
         #10x per sec I think
         self.upgradelist = Variable(value=self.upgrade.upgrades)
-        upgradeBox.config(listvariable=self.upgradelist)
+        upgrade_box.config(listvariable=self.upgradelist)
         self.character_stats = Variable(value=self.character.statblock)
         character_box.config(listvariable=self.character_stats)
         self._root.after(100,self.update)

@@ -7,5 +7,5 @@ class Upgrade:
     def buy(self, resources, x):
         if resources.r1  >= self.upgrades[x][1]:
             resources.r1 -= self.upgrades[x][1]
-            resources.addr1 += self.upgrades[x][2]
+            resources.add_r1 += self.upgrades[x][2]
             self.upgrades.pop(x)
