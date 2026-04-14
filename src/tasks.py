@@ -2,12 +2,16 @@ from invoke import task
 
 @task
 def start(ctx):
-	ctx.run("python3 index.py", pty=True)
+    ctx.run("python3 index.py", pty=True)
 
 @task
 def test(ctx):
     ctx.run("pytest tests", pty=True)
-    
+
+@task
+def lint(ctx):
+     ctx.run("pylint .", pty=True)
+
 @task
 def coverage(ctx):
     ctx.run("coverage run --branch -m pytest", pty=True)

@@ -16,7 +16,6 @@ class UI:
     def start(self):
         def buy_ap_button():
             self.character.buy_ap(self.resource)
-        #good code alert
         global r1
         r1 = ttk.Label(master=self._root, text=self.resource.r1)
         global persec_r1

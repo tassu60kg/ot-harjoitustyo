@@ -1,8 +1,11 @@
 class Upgrade:
-    def __init__(self, upgrades = [("example 1", 100, 1),
+    def __init__(self, upgrades = None):
+        if upgrades is None:
+            self.upgrades =  [("example 1", 100, 1),
                                    ("example 2", 400, 2),
-                                   ("example 3", 800, 1)]):
-        self.upgrades = upgrades
+                                   ("example 3", 800, 1)]
+        else:
+            self.upgrades = upgrades
 
     def buy(self, resources, x):
         if resources.r1  >= self.upgrades[x][1]:
