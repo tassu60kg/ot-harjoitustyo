@@ -21,8 +21,8 @@ class UI:
         r1 = ttk.Label(master=self._root, text=self.resource.r1)
         global persec_r1
         persec_r1 = ttk.Label(master=self._root, text=f"{self.resource.add_r1*10} swag per second")
-        global upgradeBox
-        upgradeBox = Listbox(master=self._root, listvariable=self.upgradelist)
+        global upgrade_box
+        upgrade_box = Listbox(master=self._root, listvariable=self.upgradelist)
         global character_box
         character_box = Listbox(master=self._root, listvariable=self.character_stats)
         global ap 
@@ -39,14 +39,14 @@ class UI:
 
 
         def upgrade_box_handler(event):
-            selected = int(upgradeBox.curselection()[0])
+            selected = int(upgrade_box.curselection()[0])
             self.upgrade.buy(self.resource, selected)
 
         def character_box_handler(event):
             selected = int(character_box.curselection()[0])
             self.character.upgrade(selected)
 
-        upgradeBox.bind("<<ListboxSelect>>", upgrade_box_handler)
+        upgrade_box.bind("<<ListboxSelect>>", upgrade_box_handler)
         character_box.bind("<<ListboxSelect>>", character_box_handler)
 
 
