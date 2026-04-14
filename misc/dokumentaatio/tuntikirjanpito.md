@@ -7,4 +7,4 @@
 | 31.3  | 2.5  | päivitykset alkuun, testaus | 
 | 10.4  | 2    | hahmo-ominaisuuden alku, pylintin kanssa taistelu |
 | 13.4  | 1.5  | hahmo-ominaisuuden kehittämistä |
-| 14.4  | 1.5  | ominaisuuksien kehittämistä, refaktoriointia |
+| 14.4  | 2    | ominaisuuksien kehittämistä, refaktoriointia, pakkauskaavio |
