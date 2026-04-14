@@ -7,4 +7,4 @@ class TestResource(unittest.TestCase):
 
     def test_increase_working(self):
         self.resource.increase()
-        self.assertEqual(self.resource.R1, 20)
+        self.assertEqual(self.resource.r1, 20)

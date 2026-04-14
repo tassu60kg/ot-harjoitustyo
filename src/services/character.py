@@ -14,9 +14,9 @@ class Character:
         self.ap_cost = ap_cost
 
     def buy_ap(self, resources):
-        if resources.R1 >= self.ap_cost:
+        if resources.r1 >= self.ap_cost:
             self.ap += 1
-            resources.R1 -= self.ap_cost
+            resources.r1 -= self.ap_cost
             self.ap_cost = ceil(self.ap_cost * 1.4)
 
     def upgrade(self, x):
