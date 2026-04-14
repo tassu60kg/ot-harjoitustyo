@@ -17,3 +17,4 @@ Vaihtoehtoisesti:
  - [changelog](https://github.com/tassu60kg/ot-harjoitustyo/blob/main/misc/dokumentaatio/changelog.md)
  - [vaatimusmäärittely](https://github.com/tassu60kg/ot-harjoitustyo/blob/main/misc/dokumentaatio/vaativuusmaarittely.md)
  - [tuntikirjanpito](https://github.com/tassu60kg/ot-harjoitustyo/blob/main/misc/dokumentaatio/tuntikirjanpito.md)
+ - [arkkitehtuuri](https://github.com/tassu60kg/ot-harjoitustyo/blob/main/misc/dokumentaatio/arkkitehtuuri.md)
