@@ -8,3 +8,4 @@
 | 10.4  | 2    | hahmo-ominaisuuden alku, pylintin kanssa taistelu |
 | 13.4  | 1.5  | hahmo-ominaisuuden kehittämistä |
 | 14.4  | 2    | ominaisuuksien kehittämistä, refaktoriointia, pakkauskaavio |
+| yhteensä | 11.5 | kaiken |
