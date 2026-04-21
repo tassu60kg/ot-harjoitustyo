@@ -18,3 +18,4 @@ Vaihtoehtoisesti:
  - [vaatimusmäärittely](https://github.com/tassu60kg/ot-harjoitustyo/blob/main/misc/dokumentaatio/vaativuusmaarittely.md)
  - [tuntikirjanpito](https://github.com/tassu60kg/ot-harjoitustyo/blob/main/misc/dokumentaatio/tuntikirjanpito.md)
  - [arkkitehtuuri](https://github.com/tassu60kg/ot-harjoitustyo/blob/main/misc/dokumentaatio/arkkitehtuuri.md)
+ - [viikko 5 release](https://github.com/tassu60kg/ot-harjoitustyo/releases/tag/viikko5)
