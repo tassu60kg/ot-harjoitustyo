@@ -8,4 +8,6 @@
 | 10.4  | 2    | hahmo-ominaisuuden alku, pylintin kanssa taistelu |
 | 13.4  | 1.5  | hahmo-ominaisuuden kehittämistä |
 | 14.4  | 2    | ominaisuuksien kehittämistä, refaktoriointia, pakkauskaavio |
-| yhteensä | 11.5 | kaiken |
+| 17.4  | 1    | UI-muutoksia, testien luonti|
+| 21.4  | 2    | taistelu-ominaisuuden kehitys |
+| yhteensä | 14.5 | kaiken |

@@ -2,12 +2,12 @@ from math import ceil
 
 class Character:
     def __init__(self,
-                 statblock = [["power",0],
-                              ["agility",0],
-                              ["tuffness",0],
-                              ["brain",0],
-                              ["cerebellum",0],
-                              ["skill6",0] ],
+                 statblock = [["power",1],
+                              ["agility",1],
+                              ["tuffness",1],
+                              ["brain",1],
+                              ["cerebellum",1],
+                              ["skill6",1] ],
                  ap=0,ap_cost = 100):
         self.statblock = statblock
         self.ap = ap

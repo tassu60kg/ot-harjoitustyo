@@ -11,3 +11,8 @@
  - käyttöliittymää muutettu
  - koodia refaktoroitu lähes kaikkialta
  - useita testejä lisätty
+## Viikko 5
+ - kykyjä voi nyt käyttää taistelemiseen
+ - koodia refaktorioitu hieman
+ - käyttöliittymä muuttunut hieman
+ - testejä lisätty
