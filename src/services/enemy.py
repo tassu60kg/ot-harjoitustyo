@@ -7,4 +7,4 @@ class Enemy:
     def scale(self):
         self.iteration += 1
         self.name = f"enemy {self.iteration}"
-        self.powerscale *= 10
+        self.powerscale *= 2

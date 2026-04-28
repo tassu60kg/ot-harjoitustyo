@@ -11,4 +11,5 @@
 | 17.4  | 1    | UI-muutoksia, testien luonti|
 | 21.4  | 2    | taistelu-ominaisuuden kehitys |
 | 24.4  | 1.5  | taistelu-ominaisuuden parantelu |
-| yhteensä | 16 | kaiken |
+| 28.4  | 3    | tallennus-ominaisuuden kehittämistä, taistelu-ominaisuuden kehittämistä|
+| yhteensä | 19 | kaiken |
