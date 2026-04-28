@@ -68,11 +68,15 @@ class UI:
         warningthing.grid(row=4, column=0)
 
         def upgrade_box_handler(_event):
-            self.upgrade_selector = int(upgrade_box.curselection()[0])
-
+            try: #tkinter problem, not my fault
+                self.upgrade_selector = int(upgrade_box.curselection()[0])
+            except IndexError:
+                pass
         def character_box_handler(_event):
-            self.apgrade_selector = int(character_box.curselection()[0])
-
+            try:
+                self.apgrade_selector = int(character_box.curselection()[0])
+            except IndexError:
+                pass
         upgrade_box.bind("<<ListboxSelect>>", upgrade_box_handler)
         character_box.bind("<<ListboxSelect>>", character_box_handler)
 
