@@ -25,6 +25,8 @@ class UI:
             self.upgrade.buy(self.resource, self.upgrade_selector)
         def apgrade_action():
             self.character.upgrade(self.apgrade_selector)
+        def unapgrade_action():
+            self.character.unupgrade(self.apgrade_selector)
         def fight_action():
             if self.fighting.fight(self.character, self.enemy):
                 self.enemy.scale()
@@ -41,6 +43,7 @@ class UI:
         buyap = ttk.Button(master=self._root, text ="buy ap", command=buy_ap_button)
         upgrade_button = ttk.Button(master=self._root, text="buy upgrade", command=upgrade_action)
         apgrade_button = ttk.Button(master=self._root, text="buy apgrade", command=apgrade_action)
+        unapgrade_button = ttk.Button(master=self._root, text="unapgrade", command=unapgrade_action)
         global enemy_text
         enemy_text = ttk.Label(master=self._root, 
                               text=f"{self.enemy.name}: {self.enemy.powerscale} power")
@@ -58,6 +61,7 @@ class UI:
         character_box.grid(row=2, column=1)
         upgrade_button.grid(row=3,column=0)
         apgrade_button.grid(row=3,column=1)
+        unapgrade_button.grid(row=4, column=1)
         enemy_text.grid(row=2, column=2)
         enemy_button.grid(row=2, column=3)
         powerlevel.grid(row=3, column=2)

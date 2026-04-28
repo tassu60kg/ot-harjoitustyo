@@ -8,7 +8,7 @@ class Character:
                               ["brain",1],
                               ["cerebellum",1],
                               ["skill6",1] ],
-                 ap=100000,ap_cost = 100):
+                 ap=0,ap_cost = 100):
         self.statblock = statblock
         self.ap = ap
         self.ap_cost = ap_cost
@@ -23,3 +23,8 @@ class Character:
         if self.ap > 0:
             self.statblock[x][1] += 1
             self.ap -= 1
+
+    def unupgrade(self, x):
+        if self.statblock[x][1] > 1:
+            self.statblock[x][1] -= 1
+            self.ap += 1

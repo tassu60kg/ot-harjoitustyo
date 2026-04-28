@@ -15,3 +15,5 @@ class Upgrade:
             resources.r1 -= self.upgrades[x][1]
             resources.add_r1 += self.upgrades[x][2]
             self.upgrades.pop(x)
+
+        
