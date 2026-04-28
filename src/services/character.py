@@ -8,7 +8,7 @@ class Character:
                               ["brain",1],
                               ["cerebellum",1],
                               ["skill6",1] ],
-                 ap=0,ap_cost = 100):
+                 ap=100000,ap_cost = 100):
         self.statblock = statblock
         self.ap = ap
         self.ap_cost = ap_cost

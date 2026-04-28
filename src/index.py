@@ -45,6 +45,10 @@ class UI:
         enemy_text = ttk.Label(master=self._root, 
                               text=f"{self.enemy.name}: {self.enemy.powerscale} power")
         enemy_button = ttk.Button(master=self._root, text="fight",command=fight_action)
+        global powerlevel
+        powerlevel = ttk.Label(master=self._root, text=self.fighting.character_power)
+
+        warningthing = ttk.Label(master=self._root, text="if something goes out of the window resize it")
 
         r1.grid(row=0, column=0)
         ap.grid(row=1, column=0)
@@ -56,6 +60,8 @@ class UI:
         apgrade_button.grid(row=3,column=1)
         enemy_text.grid(row=2, column=2)
         enemy_button.grid(row=2, column=3)
+        powerlevel.grid(row=3, column=2)
+        warningthing.grid(row=4, column=0)
 
         def upgrade_box_handler(_event):
             self.upgrade_selector = int(upgrade_box.curselection()[0])
@@ -78,6 +84,8 @@ class UI:
         self.character_stats = Variable(value=self.character.statblock)
         character_box.config(listvariable=self.character_stats)
         enemy_text.config(text=f"{self.enemy.name}: {self.enemy.powerscale} power")
+        self.fighting.get_power(self.character.statblock)
+        powerlevel.config(text=f"power: {self.fighting.character_power}")
         self._root.after(100,self.update)
 
 

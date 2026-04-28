@@ -10,4 +10,5 @@
 | 14.4  | 2    | ominaisuuksien kehittämistä, refaktoriointia, pakkauskaavio |
 | 17.4  | 1    | UI-muutoksia, testien luonti|
 | 21.4  | 2    | taistelu-ominaisuuden kehitys |
-| yhteensä | 14.5 | kaiken |
+| 24.4  | 1.5  | taistelu-ominaisuuden parantelu |
+| yhteensä | 16 | kaiken |
