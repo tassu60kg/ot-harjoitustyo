@@ -21,7 +21,6 @@ class UI:
         self.saveload = saveload.SaveLoad()
         self.upgrade_box = Listbox(master=self._root, listvariable=self.upgradelist)
         self.character_box = Listbox(master=self._root, listvariable=self.character_stats)
-
     def start(self):
         def buy_ap_button():
             self.character.buy_ap(self.resource)
@@ -37,11 +36,13 @@ class UI:
         def save_action():
             self.saveload.save(self.upgrade,
                                self.resource,
-                               self.character)
+                               self.character,
+                               self.enemy)
         def load_action():
             self.saveload.load(self.upgrade,
                                self.resource,
-                               self.character)
+                               self.character,
+                               self.enemy)
 
         global r1
         r1 = ttk.Label(master=self._root, text=self.resource.r1)
@@ -54,7 +55,7 @@ class UI:
         apgrade_button = ttk.Button(master=self._root, text="buy apgrade", command=apgrade_action)
         unapgrade_button = ttk.Button(master=self._root, text="unapgrade", command=unapgrade_action)
         global enemy_text
-        enemy_text = ttk.Label(master=self._root, 
+        enemy_text = ttk.Label(master=self._root,
                               text=f"{self.enemy.name}: {self.enemy.powerscale} power")
         enemy_button = ttk.Button(master=self._root, text="fight",command=fight_action)
         global powerlevel
@@ -62,8 +63,8 @@ class UI:
         save_button = ttk.Button(master=self._root, text="save", command=save_action)
         load_button = ttk.Button(master=self._root, text="load", command=load_action)
 
-        warningthing = ttk.Label(master=self._root, text="if something goes out of the window resize it")
-
+        warningthing = ttk.Label(master=self._root,
+                                 text="if something goes out of the window resize it")
         r1.grid(row=0, column=0)
         ap.grid(row=1, column=0)
         buyap.grid(row=1,column=1)
