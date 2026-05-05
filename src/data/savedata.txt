@@ -1,9 +1,0 @@
-('upgrade 2', 200, 2), ('upgrade 3', 400, 3), ('upgrade 4', 800, 4), ('upgrade 5', 1600, 5), ('upgrade 6', 3200, 6)
-29
-2
-['power', 1], ['agility', 1], ['tuffness', 1], ['brain', 1], ['cerebellum', 1], ['skill6', 1]
-0
-100
-enemy 1
-1
-1
