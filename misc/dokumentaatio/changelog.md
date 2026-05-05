@@ -16,3 +16,7 @@
  - koodia refaktorioitu hieman
  - käyttöliittymä muuttunut hieman
  - testejä lisätty
+ ## Viikko 6
+ - alkeellinen ja rikkinäinen tallennusominaisuus
+ - koodia refaktorioitu hieman
+ - käyttöliittymä muuttunut hieman
