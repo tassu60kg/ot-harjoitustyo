@@ -1,10 +1,10 @@
-from tkinter import Tk, ttk, Listbox, Variable
+from tkinter import ttk, Listbox, Variable
 from services import resources
 from services import upgrades
 from services import character
 from services import enemy
 from services import fighting
-from services import saveload
+from data import saveload
 
 class UI:
     def __init__(self, root):
@@ -16,11 +16,12 @@ class UI:
         self.character_stats = Variable(value=self.character.statblock)
         self.upgrade_selector = 0
         self.apgrade_selector = 0
-        self.enemy = enemy.Enemy("enemy 1", 1)
+        self.enemy = enemy.Enemy("enemy", 1)
         self.fighting = fighting.Fighting()
         self.saveload = saveload.SaveLoad()
         self.upgrade_box = Listbox(master=self._root, listvariable=self.upgradelist)
         self.character_box = Listbox(master=self._root, listvariable=self.character_stats)
+
     def start(self):
         def buy_ap_button():
             self.character.buy_ap(self.resource)
@@ -74,9 +75,9 @@ class UI:
         upgrade_button.grid(row=3,column=0)
         apgrade_button.grid(row=3,column=1)
         unapgrade_button.grid(row=4, column=1)
-        enemy_text.grid(row=2, column=2)
-        enemy_button.grid(row=2, column=3)
-        powerlevel.grid(row=3, column=2)
+        enemy_text.grid(row=5, column=1)
+        enemy_button.grid(row=6, column=1)
+        powerlevel.grid(row=0, column=2)
         save_button.grid(row=5,column=0)
         load_button.grid(row=6,column=0)
         warningthing.grid(row=4, column=0)
@@ -110,4 +111,3 @@ class UI:
         powerlevel.config(text=f"power: {self.fighting.character_power}")
         #print(self.saveload.data)
         self._root.after(100,self.update)
-

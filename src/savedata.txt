@@ -1,9 +1,0 @@
-('example 2', 200, 2), ('example 3', 400, 3), ('example 4', 800, 4), ('example 5', 1600, 5), ('example 6', 3200, 6)
-480
-2
-['power', 1], ['agility', 1], ['tuffness', 2], ['brain', 1], ['cerebellum', 1], ['skill6', 1]
-0
-140
-enemy 1
-1
-1

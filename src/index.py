@@ -1,5 +1,5 @@
 from tkinter import Tk
-from services import ui
+from ui import ui
 
 window = Tk()
 window.geometry("600x480")

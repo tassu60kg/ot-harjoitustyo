@@ -12,5 +12,6 @@
 | 21.4  | 2    | taistelu-ominaisuuden kehitys |
 | 24.4  | 1.5  | taistelu-ominaisuuden parantelu |
 | 28.4  | 3    | tallennus-ominaisuuden kehittämistä, taistelu-ominaisuuden kehittämistä|
-| 4.5   | 3    | tallennus-ominaisuus toimivaksi
-| yhteensä | 22 | kaiken |
+| 4.5   | 3    | tallennus-ominaisuus toimivaksi |
+| 5.5   | 3.5  | resaktorointia, dokumenataatiota, ui muutoksia|
+| yhteensä | 25.5 | kaiken |
