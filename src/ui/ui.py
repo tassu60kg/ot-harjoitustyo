@@ -16,8 +16,7 @@ class UI:
         self.character_stats = Variable(value=self.character.statblock)
         self.upgrade_selector = 0
         self.apgrade_selector = 0
-        self.enemy = enemy.Enemy("enemy", 1)
-        self.fighting = fighting.Fighting()
+        self.fighting = fighting.Fighting("enemy", 1)
         self.saveload = saveload.SaveLoad()
         self.upgrade_box = Listbox(master=self._root, listvariable=self.upgradelist)
         self.character_box = Listbox(master=self._root, listvariable=self.character_stats)
@@ -32,18 +31,18 @@ class UI:
         def unapgrade_action():
             self.character.unupgrade(self.apgrade_selector)
         def fight_action():
-            if self.fighting.fight(self.character, self.enemy):
-                self.enemy.scale()
+            if self.fighting.fight(self.character, self.fighting):
+                self.fighting.scale()
         def save_action():
             self.saveload.save(self.upgrade,
                                self.resource,
                                self.character,
-                               self.enemy)
+                               self.fighting)
         def load_action():
             self.saveload.load(self.upgrade,
                                self.resource,
                                self.character,
-                               self.enemy)
+                               self.fighting)
 
         global r1
         r1 = ttk.Label(master=self._root, text=self.resource.r1)
@@ -57,7 +56,7 @@ class UI:
         unapgrade_button = ttk.Button(master=self._root, text="unapgrade", command=unapgrade_action)
         global enemy_text
         enemy_text = ttk.Label(master=self._root,
-                              text=f"{self.enemy.name}: {self.enemy.powerscale} power")
+                              text=f"{self.fighting.name}: {self.fighting.powerscale} power")
         enemy_button = ttk.Button(master=self._root, text="fight",command=fight_action)
         global powerlevel
         powerlevel = ttk.Label(master=self._root, text=self.fighting.character_power)
@@ -106,7 +105,7 @@ class UI:
         self.upgrade_box.config(listvariable=self.upgradelist)
         self.character_stats = Variable(value=self.character.statblock)
         self.character_box.config(listvariable=self.character_stats)
-        enemy_text.config(text=f"{self.enemy.name}: {self.enemy.powerscale} power")
+        enemy_text.config(text=f"{self.fighting.name}: {self.fighting.powerscale} power")
         self.fighting.get_power(self.character.statblock)
         powerlevel.config(text=f"power: {self.fighting.character_power}")
         #print(self.saveload.data)

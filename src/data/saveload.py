@@ -6,7 +6,7 @@ class SaveLoad:
     def __init__(self, file = "data/savedata.txt"):
         self.file = file
 
-    def save(self, upgrade, resources, character, enemy):
+    def save(self, upgrade, resources, character, fighting):
         """saves the current state of objects to file
         Args:
             upgrade (upgrade type object):
@@ -15,9 +15,9 @@ class SaveLoad:
             enemy (enemy type object):
             """
         with open(self.file, "w", encoding="utf-8") as save:
-            save.write(f"({str(upgrade.upgrades).strip("[]")[1:-1]})\n{resources.r1}\n{resources.add_r1}\n{str(character.statblock)[1:-1]}\n{character.ap}\n{character.ap_cost}\n{enemy.name}\n{enemy.powerscale}\n{enemy.iteration}")
+            save.write(f"({str(upgrade.upgrades).strip("[]")[1:-1]})\n{resources.r1}\n{resources.add_r1}\n{str(character.statblock)[1:-1]}\n{character.ap}\n{character.ap_cost}\n{fighting.name}\n{fighting.powerscale}\n{fighting.iteration}")
 
-    def load(self, upgrade, resources, character, enemy):
+    def load(self, upgrade, resources, character, fighting):
         """loads the saved states to objects
         Args:
             upgrade (upgrade type object):
@@ -41,6 +41,6 @@ class SaveLoad:
             character.statblock = _templist
             character.ap = int(temp[4])
             character.ap_cost = int(temp[5])
-            enemy.name = temp[6]
-            enemy.powerscale = int(temp[7])
-            enemy.iteration = int(temp[8])
+            fighting.name = temp[6]
+            fighting.powerscale = int(temp[7])
+            fighting.iteration = int(temp[8])
