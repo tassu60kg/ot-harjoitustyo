@@ -2,7 +2,6 @@ from tkinter import ttk, Listbox, Variable
 from services import resources
 from services import upgrades
 from services import character
-from services import enemy
 from services import fighting
 from data import saveload
 
@@ -31,7 +30,7 @@ class UI:
         def unapgrade_action():
             self.character.unupgrade(self.apgrade_selector)
         def fight_action():
-            if self.fighting.fight(self.character, self.fighting):
+            if self.fighting.fight():
                 self.fighting.scale()
         def save_action():
             self.saveload.save(self.upgrade,

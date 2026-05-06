@@ -4,7 +4,7 @@ from services import resources
 
 class TestCharacter(unittest.TestCase):
     def setUp(self):
-        self.character = character.Character([["test",0],["test2",0] ],
+        self.character = character.Character([["test",1],["test2",1] ],
                  0,100)
         self.resource = resources.Resource(100,100)
 
@@ -18,11 +18,20 @@ class TestCharacter(unittest.TestCase):
         self.assertEqual(self.character.ap, 0)
 
     def test_buy_skill(self):
-        character_new = character.Character([["test",0],["test2",0] ],
+        character_new = character.Character([["test",1],["test2",1] ],
                  1,100)
         character_new.upgrade(1)
-        self.assertEqual(character_new.statblock[1][1],1)
+        self.assertEqual(character_new.statblock[1][1],2)
 
     def test_can_not_buy_skill(self):
         self.character.upgrade(1)
-        self.assertEqual(self.character.statblock[1][1],0)
+        self.assertEqual(self.character.statblock[1][1],1)
+
+    def test_unupgrade(self):
+        character_new = character.Character([["test",2],["test2",1] ], 1,100)
+        character_new.unupgrade(0)
+        self.assertEqual(self.character.statblock[0][1],1)
+
+    def test_unupgrade_not_negative(self):
+        self.character.unupgrade(0)
+        self.assertEqual(self.character.statblock[0][1],1)
