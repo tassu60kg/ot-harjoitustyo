@@ -25,22 +25,25 @@ class SaveLoad:
             character (character type object):
             enemy (enemy type object):
             """
-        with open(self.file, encoding="utf-8") as save:
-            temp = [i.rstrip() for i in save]
-            _templist = []
-            _x =  temp[0].split(", ")
-            for i in range(0,len(_x)-2,3):
-                _templist.append((_x[i][2:-1],int(_x[i+1]),int(_x[i+2].strip("()"))))
-            upgrade.upgrades = _templist
-            resources.r1 = int(temp[1])
-            resources.add_r1 = int(temp[2])
-            _templist = []
-            _x =  temp[3].split(", ")
-            for i in range(0,len(_x)-1,2):
-                _templist.append([_x[i][2:-1],int(_x[i+1][:-1])])
-            character.statblock = _templist
-            character.ap = int(temp[4])
-            character.ap_cost = int(temp[5])
-            fighting.name = temp[6]
-            fighting.powerscale = int(temp[7])
-            fighting.iteration = int(temp[8])
+        try:
+            with open(self.file, encoding="utf-8") as save:
+                temp = [i.rstrip() for i in save]
+                _templist = []
+                _x =  temp[0].split(", ")
+                for i in range(0,len(_x)-2,3):
+                    _templist.append((_x[i][2:-1],int(_x[i+1]),int(_x[i+2].strip("()"))))
+                upgrade.upgrades = _templist
+                resources.r1 = int(temp[1])
+                resources.add_r1 = int(temp[2])
+                _templist = []
+                _x =  temp[3].split(", ")
+                for i in range(0,len(_x)-1,2):
+                    _templist.append([_x[i][2:-1],int(_x[i+1][:-1])])
+                character.statblock = _templist
+                character.ap = int(temp[4])
+                character.ap_cost = int(temp[5])
+                fighting.name = temp[6]
+                fighting.powerscale = int(temp[7])
+                fighting.iteration = int(temp[8])
+        except FileNotFoundError:
+            print("save file does not exist")

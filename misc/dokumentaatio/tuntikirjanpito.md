@@ -15,4 +15,5 @@
 | 4.5   | 3    | tallennus-ominaisuus toimivaksi |
 | 5.5   | 3.5  | refaktorointia, dokumenataatiota, ui muutoksia|
 | 6.5   | 1    | refaktorointia, testien luontia |
+| 8.5   | 1    | testien luontia |
 | yhteensä | 26.5 | kaiken |
