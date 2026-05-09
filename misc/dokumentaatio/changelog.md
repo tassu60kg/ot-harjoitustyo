@@ -20,3 +20,8 @@
  - alkeellinen ja rikkinäinen tallennusominaisuus
  - koodia refaktorioitu hieman
  - käyttöliittymä muuttunut hieman
+ ## Viikko 7
+ - Tallennus toimii
+ - Koodia refaktoroitu
+ - Testejä lisätty
+ - Dokumentaatiota lisätty ja muutettu
