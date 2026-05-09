@@ -1,10 +1,19 @@
- ## luokkakaavio
+ # Arkkitehtuuri
+ 
+ ## Luokkakaavio
 ```mermaid
 classDiagram
-    index -- resources
-    index -- upgrades
-    index -- character
+    UI -- character
+    UI -- fighting
+    UI -- resources
+    UI -- upgrades    
     resources -- upgrades
-    resources -- character
+    character -- resources
+    saveload -- character
+    saveload -- fighting
+    saveload -- resources
+    saveload -- upgrades
 ```
-index vastaa käyttöliittymästä, muut omista ominaisuuksistaan
+`UI` on yllättäen käyttöliittymästä vastaaa luokka. Käyttöliittymä sisältää yhden näkymän.
+
+`resources`-luokka luo olion jota käytetään `character`- ja `upgrades`-luokan asioiden ostamisessa. Lisäksi tämä luokka vastaa resurssien (itsensä) passiivisesta tuotosta `increase()` metodin kautta.
