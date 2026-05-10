@@ -25,6 +25,4 @@ classDiagram
 `fighting`-luokka käsittelee vihollista ja pelaajan välisestä kamppailusta sen kanssa. Lisäksi luokassa muutetaan `character`-luokan `statblock`-attribuutti vihollisten taistelua vastaan käytettävään `character_power` muotoon.
 
  ## Tietojen tallennus
- Tiedot tallennetaan `savedata.txt`-tiedostoon `savedata`-luokan `save`-metodilla. Tiedosto on formatoitu, jotta sen käsittely olisi mahdollisimman helppoa; tästä vastaa saman luokan `load`-metodi, jolle annetaan eri luokkien objektit joita se muuttaa. Tiedoston eri rivit ovat selitetty läpi käyttöohjeessa.
-
- 
+ Tiedot tallennetaan `savedata.txt`-tiedostoon `savedata`-luokan `save`-metodilla. Tiedosto on formatoitu, jotta sen käsittely olisi mahdollisimman helppoa saman luokan `load`-metodilla, jolle annetaan kaikkien muiden luokkien (paitsi UI) objektit joita se muuttaa. Tiedoston eri rivit ovat selitetty läpi käyttöohjeessa.
