@@ -11,8 +11,11 @@
 ## Järjestelmätestaus
  Suoritettu manuaalisesti.
 
-## Asennus ja konfigurointi
- Ohjelmaa on testattu vain käyttöohjeen määrittelemällä tavalla Linux-ympäristössä
+### Asennus ja konfigurointi
+ Ohjelmaa on testattu vain käyttöohjeen määrittelemällä tavalla Linux-ympäristössä.
 
+### Toiminnallisuus
+ Vaativuusmäärittelyn ja käyttöohjeen toiminnallisuudet on käyty käyty läpi.
+ 
 ## Jääneet laatuongelmat
   Jos käyttäjä muuttaa tallennustiedostoa väärin, ohjelma voi heittää virheilmoituksia tai hajota jollakin tavalla. Tässä tapauksessa syy on kuitenkin käyttäjän.
