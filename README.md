@@ -32,5 +32,7 @@ Linttaus:
  - [vaatimusmäärittely](https://github.com/tassu60kg/ot-harjoitustyo/blob/main/misc/dokumentaatio/vaativuusmaarittely.md)
  - [tuntikirjanpito](https://github.com/tassu60kg/ot-harjoitustyo/blob/main/misc/dokumentaatio/tuntikirjanpito.md)
  - [arkkitehtuuri](https://github.com/tassu60kg/ot-harjoitustyo/blob/main/misc/dokumentaatio/arkkitehtuuri.md)
+ - [testausdokumentti](https://github.com/tassu60kg/ot-harjoitustyo/blob/main/misc/dokumentaatio/testaus.md)
+ - [käyttöohje](https://github.com/tassu60kg/ot-harjoitustyo/blob/main/misc/dokumentaatio/kaytto-ohje.md)
  - [viikko 5 release](https://github.com/tassu60kg/ot-harjoitustyo/releases/tag/viikko5)
 
