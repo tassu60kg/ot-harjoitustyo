@@ -16,4 +16,6 @@
 | 5.5   | 3.5  | refaktorointia, dokumenataatiota, ui muutoksia|
 | 6.5   | 1    | refaktorointia, testien luontia |
 | 8.5   | 1    | testien luontia |
-| yhteensä | 26.5 | kaiken |
+| 9.5   | 0.5    | testaus.md |
+| 10.5  | 1.5    | dokumentaation viimeistely |
+| yhteensä | 30.5 | kaiken |
