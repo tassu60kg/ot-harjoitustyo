@@ -19,3 +19,5 @@
  
 ## Jääneet laatuongelmat
   Jos käyttäjä muuttaa tallennustiedostoa väärin, ohjelma voi heittää virheilmoituksia tai hajota jollakin tavalla. Tässä tapauksessa syy on kuitenkin käyttäjän.
+  
+  Huono tiedostorakenne.
