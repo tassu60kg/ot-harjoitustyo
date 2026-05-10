@@ -22,7 +22,7 @@ classDiagram
 
 `character`-luokka vastaa kyvyistä ja niiden päivittämisestä. Luokan objekti sisältää `statblock` attribuutin, jota voidaan käsitellä luokan `upgrade`- ja `unupgrade`-metodien kautta. Lisäksi luokka käsittelee AP:n (myös luokan attribuutti) ostoa `buy_ap`-metodin kautta, jolle annettaan `resources`-luokan objekti.
 
-`fighting`-luokka käsittelee vihollista ja pelaajan välisestä kamppailusta sen kanssa. Lisäksi luokassa muutetaan `character`-luokan `statblock`-attribuutti vihollisten taistelua vastaan käytettävään `character_power` muotoon.
+`fighting`-luokka käsittelee vihollista ja pelaajan välisestä kamppailusta sen kanssa. Luokassa muutetaan `character`-luokan `statblock`-attribuutti vihollisten taistelua vastaan käytettävään `character_power` muotoon. Pelaajan ja vihollisen välinen kamppailu tapahtuu luokan `fight`-metodin kautta. Lisäksi luokan viholliseen liittyviä attribuutteja muutetaan `scale`-metodin kautta.
 
  ## Tietojen tallennus
  Tiedot tallennetaan `savedata.txt`-tiedostoon `savedata`-luokan `save`-metodilla. Tiedosto on formatoitu, jotta sen käsittely olisi mahdollisimman helppoa saman luokan `load`-metodilla, jolle annetaan kaikkien muiden luokkien (paitsi UI) objektit joita se muuttaa. Tiedoston eri rivit ovat selitetty läpi käyttöohjeessa.
