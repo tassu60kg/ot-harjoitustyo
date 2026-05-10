@@ -1,6 +1,11 @@
 from math import log
 
 class Fighting:
+    """saves and loads
+    Attributes:
+        name (str) : enemy name
+        powerscale (int) : enemy power
+    """
     def __init__(self, name, powerscale):
         self.character_power = 1
         self.iteration = 1
@@ -8,12 +13,17 @@ class Fighting:
         self.powerscale = powerscale
 
     def get_power(self, statblock):
-        self.character_power = ((log(statblock[0][1]*statblock[1][1])+statblock[4][1])*(log(statblock[2][1]*statblock[3][1]))/statblock[5][1])
+        """calculates the players power
+    Args:
+        statblock : players statblock 
+    """
+        self.character_power = ((log(statblock[0][1]*statblock[1][1])+statblock[4][1])*
+                                (log(statblock[2][1]*statblock[3][1]))/statblock[5][1])
 
     def fight(self):
         if self.character_power > self.powerscale:
             return True
-        else: return False
+        return False
 
     def scale(self):
         self.iteration += 1

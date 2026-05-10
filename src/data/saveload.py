@@ -15,7 +15,7 @@ class SaveLoad:
             enemy (enemy type object):
             """
         with open(self.file, "w", encoding="utf-8") as save:
-            save.write(f"({str(upgrade.upgrades).strip("[]")[1:-1]})\n{resources.r1}\n{resources.add_r1}\n{str(character.statblock)[1:-1]}\n{character.ap}\n{character.ap_cost}\n{fighting.name}\n{fighting.powerscale}\n{fighting.iteration}")
+            save.write(f"{str(upgrade.upgrades)[1:-1]}\n{resources.r1}\n{resources.add_r1}\n{str(character.statblock)[1:-1]}\n{character.ap}\n{character.ap_cost}\n{fighting.name}\n{fighting.powerscale}\n{fighting.iteration}")
 
     def load(self, upgrade, resources, character, fighting):
         """loads the saved states to objects
@@ -31,7 +31,7 @@ class SaveLoad:
                 _templist = []
                 _x =  temp[0].split(", ")
                 for i in range(0,len(_x)-2,3):
-                    _templist.append((_x[i][2:-1],int(_x[i+1]),int(_x[i+2].strip("()"))))
+                    _templist.append([_x[i][2:-1],int(_x[i+1]),int(_x[i+2][:-1])])
                 upgrade.upgrades = _templist
                 resources.r1 = int(temp[1])
                 resources.add_r1 = int(temp[2])
