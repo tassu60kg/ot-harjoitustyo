@@ -5,7 +5,7 @@
   Sovelluslogiikasta vastaavia luokkia `character`, `fighting`, `resources` ja `upgrades`, sekä tiedon tallentamisesta vastaavaa `saveload`-luokkaa testataan näiden testataan näiden omilla [testiluokilla](https://github.com/tassu60kg/ot-harjoitustyo/tree/main/src/tests). Testit sisältävät sekä yksikkö-, että integraatiotestejä. `savelaod` luokalle on lisäksi omat `testsave.txt` ja `testload.txt` testaustiedostot, mistä haetaan tai tallennetaan tietoa normaalin tallennustiedoston sijasta.
 
 ## Testikattavuus
-  Lähes kaikki oleellinen testataan, ulkopuolelle jää mm. tiedoston puuttumisen testaus sekä luokkien luomisen yhteydessä saatavat oletusarvot. Käyttöliittymää ei testata.
+  Lähes kaikki oleellinen testataan, ulkopuolelle jää mm. tiedoston puuttumisen testaus sekä objektien luomisen yhteydessä saatavat oletusarvot. Käyttöliittymää ei testata.
   <img width="888" height="432" alt="image" src="https://github.com/user-attachments/assets/e33ef2bb-2ddb-4997-8dd8-a44dffa3e7c1" />
 
 ## Järjestelmätestaus
